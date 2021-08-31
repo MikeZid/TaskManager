@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Organaizer</string>
+    <string name="tasks_and_notes">Tasks and Notes</string>
+    <string name="soon_tasks">Soon tasks</string>
+    <string name="calendar">Calendar</string>
+    <string name="schedules">Schedules</string>
+    <string name="settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="task_created">Task created</string>
+    <string name="not_correct_data">Not correct data</string>
+    <string name="name_is_empty">Name is empty</string>
+</resources>

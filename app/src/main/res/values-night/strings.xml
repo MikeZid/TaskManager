@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Organaizer</string>
+    <string name="tasks_and_notes">Tasks and Notes</string>
+    <string name="soon_tasks">Soon tasks</string>
+    <string name="calendar">Calendar</string>
+    <string name="schedules">Schedules</string>
+    <string name="settings">Settings</string>
+</resources>
