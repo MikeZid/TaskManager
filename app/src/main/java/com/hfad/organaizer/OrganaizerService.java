@@ -8,12 +8,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.IBinder;
-import android.widget.CalendarView;
 
 import androidx.core.app.NotificationCompat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class OrganaizerService extends Service {
 
@@ -62,7 +60,7 @@ public class OrganaizerService extends Service {
             }
         }).start();
 
-        Notification notification = new NotificationCompat.Builder(context, App.CHANNEL_ID)
+        Notification notification = new NotificationCompat.Builder(context, AppStarter.CHANNEL_ID)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(getString(R.string.app_name))
                 .build();
@@ -94,7 +92,7 @@ public class OrganaizerService extends Service {
         return null;
     }
     public void showNotification(PendingIntent pendingIntent, Task task) {
-        Notification notification = new NotificationCompat.Builder(context, App.CHANNEL_ID)
+        Notification notification = new NotificationCompat.Builder(context, AppStarter.CHANNEL_ID)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(getString(R.string.app_name))
                 .setAutoCancel(true)

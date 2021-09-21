@@ -69,7 +69,7 @@ public class OrganaizerServiceTest extends Service {
             }
         }).start();
 
-        Notification notification = new NotificationCompat.Builder(context, App.CHANNEL_ID)
+        Notification notification = new NotificationCompat.Builder(context, AppStarter.CHANNEL_ID)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(getString(R.string.app_name))
                 .build();
@@ -110,7 +110,7 @@ public class OrganaizerServiceTest extends Service {
     }
 
     public void showNotification(PendingIntent pendingIntent, Task task) {
-        Notification notification = new NotificationCompat.Builder(context, App.CHANNEL_ID)
+        Notification notification = new NotificationCompat.Builder(context, AppStarter.CHANNEL_ID)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(getString(R.string.app_name))
                 .setAutoCancel(true)
