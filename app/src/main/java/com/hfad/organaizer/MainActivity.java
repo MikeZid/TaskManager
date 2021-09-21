@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.hfad.organaizer.fragments.CalendarFragment;
 import com.hfad.organaizer.fragments.ListOfSchedulesFragment;
 import com.hfad.organaizer.fragments.ListOfTasksFragment;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);                                     //Вызывается родительский метод
         setContentView(R.layout.activity_main);                                 //Устнанвливается макет
         BottomNavigationView bottomNavigationView = findViewById(R.id.toolbar); // Получаем ссылку на нижнюю панель
-        bottomNavigationView.setOnNavigationItemSelectedListener(listener); // Устанавливаем слушатель
+        bottomNavigationView.setOnItemSelectedListener(listener); // Устанавливаем слушатель
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //Добавляем кнопку назад на верхней панели
         if (!isServiceRunning(OrganaizerService.class)) {
             Intent intent = new Intent(this, OrganaizerService.class); // Создаём интент для запуска службы
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     @SuppressLint("NonConstantResourceId")
-    private BottomNavigationView.OnNavigationItemSelectedListener listener = item -> {   //Слушатель нижней панели
+    private NavigationBarView.OnItemSelectedListener listener = item -> {   //Слушатель нижней панели
         Fragment selectedFragment = new ListOfTasksFragment();
                 switch (item.getItemId()) {     //Методу передаётся объект MenuItem (Это нажатая кнопка), получаем id
                     case R.id.calendar_button:         //Сравниваем полученный id с остальными, так мы понимаем какая кнопка, была нажата.
